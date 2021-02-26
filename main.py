@@ -11,6 +11,7 @@ pattern = r":gif (.+)"
 regex = re.compile(pattern,re.IGNORECASE)
 counter = 50
 
+
 @bot.message_handler(func = lambda message: re.search(regex,message.text))
 def word_to_gif(message):
     text = message.text
@@ -34,4 +35,10 @@ def biat_a_vicienz(message):
     else:
         counter = counter +1
 
-bot.polling(none_stop=False)
+'''
+@bot.message_handler(func = lambda message : True)
+def echo(message):
+    bot.send_message(message.chat.id,message.text)
+'''
+
+bot.polling(none_stop = False)
