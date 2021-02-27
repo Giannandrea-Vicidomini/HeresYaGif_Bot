@@ -12,7 +12,7 @@ def get_gif_tenor(parameter: str):
     print(q)
     key = os.environ.get("API_KEY")
     #url = f"https://api.giphy.com/v1/gifs/search?q={q}&api_key={key}"
-    url = f"https://g.tenor.com/v1/search?q={q}&key={key}&limit={10}"
+    url = f"https://g.tenor.com/v1/search?q={q}&key={key}&limit={15}"
 
     res = requests.get(url)
     return res
